@@ -1,0 +1,9 @@
+RewriteEngine on
+RewriteRule ^googlef67710e99d5221fe\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+ErrorDocument 403 /html/403.html
+<IfModule php5_module>
+   php_flag session.cookie_httponly on
+   php_flag session.cookie_secure On
+</IfModule>
